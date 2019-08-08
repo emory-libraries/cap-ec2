@@ -71,7 +71,7 @@ module CapEC2
       @ec2.each do |_, ec2|
         ec2.describe_instances(filters: filters).reservations.each do |r|
           servers += r.instances.select do |i|
-              instance_has_tag?(i, roles_tag, role) &&
+#              instance_has_tag?(i, roles_tag, role) && #Removed b/c excess filtering
                 instance_has_tag?(i, stages_tag, stage) &&
                 instance_has_tag?(i, project_tag, application) &&
                 (fetch(:ec2_filter_by_status_ok?) ? instance_status_ok?(i) : true)
