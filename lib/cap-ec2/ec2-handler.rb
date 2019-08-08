@@ -70,7 +70,7 @@ module CapEC2
       servers = []
       @ec2.each do |_, ec2|
         ec2.describe_instances(filters: filters).reservations.each do |r|
-	binding.pry
+#	binding.pry
           servers += r.instances.select do |i|
 #              instance_has_tag?(i, roles_tag, role) && #Removed b/c excess filtering
                 instance_has_tag?(i, stages_tag, stage) &&
