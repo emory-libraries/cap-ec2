@@ -51,6 +51,7 @@ module CapEC2
         if credentials
           set :ec2_access_key_id, credentials.access_key_id
           set :ec2_secret_access_key, credentials.secret_access_key
+	  set :ec2_session_token, credentials.session_token
         end
       end
 
@@ -65,6 +66,7 @@ module CapEC2
 
           set :ec2_access_key_id, config['access_key_id'] if config['access_key_id']
           set :ec2_secret_access_key, config['secret_access_key'] if config['secret_access_key']
+	  set :ec2_session_token, config['session_token'] if config['session_token']
           set :ec2_region, config['regions'] if config['regions']
 
           set :ec2_filter_by_status_ok?, config['filter_by_status_ok?'] if config['filter_by_status_ok?']

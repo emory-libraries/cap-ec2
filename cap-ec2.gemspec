@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'cap-ec2/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "cap-ec2"
+  spec.name          = "cap-ec2-emory"
   spec.version       = CapEC2::VERSION
-  spec.authors       = ["Andy Sykes", "Robert Coleman", "Forward3D Developers"]
-  spec.email         = ["github@tinycat.co.uk", "github@robert.net.nz", "developers@forward3d.com"]
+  spec.authors       = ["Andy Sykes", "Robert Coleman", "Forward3D Developers", "Solomon Hilliard", "Collin Brittle"]
+  spec.email         = ["webgroup-alerts@emory.edu"]
   spec.description   = %q{Cap-EC2 is used to generate Capistrano namespaces and tasks from Amazon EC2 instance tags, dynamically building the list of servers to be deployed to.}
   spec.summary       = %q{Cap-EC2 is used to generate Capistrano namespaces and tasks from Amazon EC2 instance tags, dynamically building the list of servers to be deployed to.}
-  spec.homepage      = "https://github.com/forward3d/cap-ec2"
+  spec.homepage      = "https://github.com/emory-libraries/cap-ec2"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

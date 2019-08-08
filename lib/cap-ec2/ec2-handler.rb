@@ -17,6 +17,7 @@ module CapEC2
       Aws::EC2::Client.new(
         access_key_id: fetch(:ec2_access_key_id),
         secret_access_key: fetch(:ec2_secret_access_key),
+	session_token: fetch(:ec2_session_token),
         region: region
       )
     end
