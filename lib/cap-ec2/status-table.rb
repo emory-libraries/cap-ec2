@@ -15,7 +15,7 @@ module CapEC2
         bold("Type"),
         bold("DNS"),
         bold("Zone"),
-        bold("Roles"),
+        bold("Project"),
         bold("Stages")
       ]
     end
@@ -43,7 +43,7 @@ module CapEC2
         cyan(instance.instance_type),
         bold(blue(CapEC2::Utils.contact_point(instance))),
         magenta(instance.placement.availability_zone),
-        #yellow(tag_value(instance, roles_tag)),
+        yellow(tag_value(instance, project_tag)),
         yellow(tag_value(instance, stages_tag))
       ]
     end
