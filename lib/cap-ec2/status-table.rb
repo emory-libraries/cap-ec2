@@ -15,8 +15,8 @@ module CapEC2
         bold("Type"),
         bold("DNS"),
         bold("Zone"),
-        bold("Project"),
-        bold("Stages")
+        bold(config[:ec2_project_tag]),
+        bold(config[:ec2_stages_tag])
       ]
     end
 
