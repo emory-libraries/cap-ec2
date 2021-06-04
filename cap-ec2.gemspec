@@ -6,7 +6,7 @@ require 'cap-ec2/version'
 Gem::Specification.new do |spec|
   spec.name          = "cap-ec2-emory"
   spec.version       = CapEC2::VERSION
-  spec.authors       = ["Andy Sykes", "Robert Coleman", "Forward3D Developers", "Solomon Hilliard", "Collin Brittle"]
+  spec.authors       = ["Andy Sykes", "Robert Coleman", "Forward3D Developers", "Solomon Hilliard", "Collin Brittle", "McClain Looney"]
   spec.email         = ["webgroup-alerts@emory.edu"]
   spec.description   = %q{Cap-EC2 is used to generate Capistrano namespaces and tasks from Amazon EC2 instance tags, dynamically building the list of servers to be deployed to.}
   spec.summary       = %q{Cap-EC2 is used to generate Capistrano namespaces and tasks from Amazon EC2 instance tags, dynamically building the list of servers to be deployed to.}
@@ -18,11 +18,11 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "bundler", "~> 2.1"
   spec.add_development_dependency "rake"
 
-  spec.add_dependency "aws-sdk", ">= 2.0"
-  spec.add_dependency "capistrano", ">= 3.0"
+  spec.add_dependency "aws-sdk-ec2", "~> 1.204"
+  spec.add_dependency "capistrano", "~> 3.0"
   spec.add_dependency "terminal-table"
   spec.add_dependency "colorize"
 end
